@@ -35,4 +35,8 @@ public interface PlatformService {
    * Provides the raw config file from server startup
    */
   InputStream getPlatformConfiguration();
+
+  <T> T getDynamicConfiguration(Class<T> type);
+
+  <T> void updateDynamicConfiguration(T entity);
 }
